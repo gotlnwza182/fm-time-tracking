@@ -47,7 +47,7 @@ const handleTimeFrames = (e: any) => {
       textPrev[
         i
       ].innerHTML = `<h1 class="text-preset-3 xl:text-preset-1">${json[i].timeframes.weekly.current}hrs</h1>
-            <p class="text-navy-200 text-preset-6">Yesterday - ${json[i].timeframes.weekly.previous}hrs</p>`;
+            <p class="text-navy-200 text-preset-6">Last Week - ${json[i].timeframes.weekly.previous}hrs</p>`;
     }
     dailyBtn?.classList.remove("text-purple-500", "text-white");
     weeklyBtn?.classList.add("text-purple-500", "text-white");
@@ -59,7 +59,7 @@ const handleTimeFrames = (e: any) => {
       textPrev[
         i
       ].innerHTML = `<h1 class="text-preset-3 xl:text-preset-1">${json[i].timeframes.monthly.current}hrs</h1>
-            <p class="text-navy-200 text-preset-6">Yesterday - ${json[i].timeframes.monthly.previous}hrs</p>`;
+            <p class="text-navy-200 text-preset-6">Last Month - ${json[i].timeframes.monthly.previous}hrs</p>`;
     }
     dailyBtn?.classList.remove("text-purple-500", "text-white");
     weeklyBtn?.classList.remove("text-purple-500", "text-white");
