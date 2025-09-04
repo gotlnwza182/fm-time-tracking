@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-navy-950 text-white md:content-center">
+    <main
+      class="grid grid-col-1 gap-6 max-w-82 mx-auto md:grid-cols-3 md:max-w-153 xl:grid-cols-4 xl:max-w-279"
+    >
+      <div
+        class="bg-navy-900 max-w-82 rounded-2xl md:col-span-3 md:max-w-full xl:row-span-2 xl:col-span-1"
+      >
+        <div
+          class="bg-purple-600 rounded-2xl flex items-center gap-6 p-8 xl:flex-col xl:items-start xl:pb-24"
+        >
+          <img
+            src="/images/image-jeremy.png"
+            alt="image-jeremy"
+            width="64px"
+            height="64px"
+            class="border-3 rounded-full"
+          />
+          <div class="">
+            <span class="text-preset-6 text-navy-200">Report for</span>
+            <p class="text-preset-4 xl:text-preset-2">Jeremy Robson</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-around py-6 text-purple-500 text-preset-5 font-normal md:justify-center md:gap-16 xl:flex-col xl:items-start xl:gap-6 xl:px-6"
+        >
+          <button
+            id="dailyBtn"
+            type="button"
+            value="daily"
+            class="hover:text-white hover:cursor-pointer text-white"
+          >
+            Daily
+          </button>
+          <button
+            id="weeklyBtn"
+            type="button"
+            value="weekly"
+            class="hover:text-white hover:cursor-pointer"
+          >
+            Weekly
+          </button>
+          <button
+            id="monthlyBtn"
+            type="button"
+            value="monthly"
+            class="hover:text-white hover:cursor-pointer"
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <article
+        class="max-w-82 content-end bg-orange-300 rounded-2xl bg-[url(/images/icon-work.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Work</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4 xl:gap-2"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1" id="currentWorkHours">
+              5hrs
+            </h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 7hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="max-w-82 content-end bg-blue-300 rounded-2xl bg-[url(/images/icon-play.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Play</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1">1hrs</h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 2hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="max-w-82 content-end bg-pink-400 rounded-2xl bg-[url(/images/icon-study.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Study</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1">0hrs</h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 1hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="max-w-82 content-end bg-green rounded-2xl bg-[url(/images/icon-exercise.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Exercise</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1">1hrs</h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 1hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="max-w-82 content-end bg-purple-700 rounded-2xl bg-[url(/images/icon-social.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Social</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1">1hrs</h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 3hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="max-w-82 content-end bg-yellow-300 rounded-2xl bg-[url(/images/icon-self-care.svg)] bg-no-repeat bg-position-[90%_-4%] md:bg-size-[57px_57px] xl:bg-size-[78px_78px]"
+      >
+        <div class="bg-navy-900 rounded-2xl p-6 mt-12 md:mt-8">
+          <div class="flex justify-between items-center mb-2 md:mb-4 xl:mb-6">
+            <h2 class="text-preset-5 font-medium">Self Care</h2>
+            <img
+              src="/images/icon-ellipsis.svg"
+              alt="icon-ellipsis"
+              class="object-contain"
+            />
+          </div>
+          <div
+            id="timeText"
+            class="flex justify-between items-center md:flex-col md:items-start md:gap-4"
+          >
+            <h1 class="text-preset-3 xl:text-preset-1">0hrs</h1>
+            <p class="text-navy-200 text-preset-6">Yesterday - 1hrs</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <div class="text-center mt-4 text-sm font-rubik md:mt-8">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-blue-500 visited:text-purple-500"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/gotlnwza182"
+        target="_blank"
+        class="text-blue-500 visited:text-purple-500"
+        >DenpongKhet</a
+      >.
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
